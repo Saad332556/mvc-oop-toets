@@ -18,8 +18,8 @@ class HomePage extends Controller
     foreach ($richestPeople as $value) {
       $rows .= "<tr>
                   <td>$value->Name</td>
-                  <td>$value->Networth</td>
-                  <td>$value->MyAge</td>
+                  <td>$value->Nettoworth</td>
+                  <td>$value->Age</td>
                   <td>$value->Company</td>
                   <td><a href='" . URLROOT . "/richest/delete/$value->Id'>delete</a></td>
                 </tr>";
@@ -29,6 +29,6 @@ class HomePage extends Controller
       'title' => "Homepage",
       'richestPeople' => $rows
     ];
-    $this->view('homepages/index', $data);
+    $this->view('homepage/index', $data);
   }
 }

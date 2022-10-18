@@ -14,7 +14,7 @@ class RichestPeople
   
   public function getRichestPeople()
   {
-    $this->db->query("SELECT * FROM richestpeople ORDER BY Networth DESC;");
+    $this->db->query("SELECT * FROM richestpeople ORDER BY Nettoworth DESC;");
     $result = $this->db->resultSet();
     return $result;
   }
